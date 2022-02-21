@@ -1,3 +1,7 @@
-<p>shared works!</p>
+<h2>Formularis de angular</h2>
 
-<app-button>Boton de Prueba</app-button>
+<app-button (click)="onPatchValue()">Agregar texto</app-button>
+
+<form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+  <app-input formControlName="input"></app-input>
+</form>
